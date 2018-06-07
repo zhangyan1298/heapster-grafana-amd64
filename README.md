@@ -6,3 +6,6 @@ vgcr.io/google_containers/heapster-grafana-amd64:v4.4.3
 
 详细说明见github地址
 https://github.com/percona/grafana-dashboards.git
+
+3.增加dashboards json 插件模板. 发现原基础镜像提供的存储类型为emptyDir ，在docker build COPY 文件到相同文件夹的时候不成功。
+可能是在build 镜像后，kubernetes 在执行时候把此目录进行初始化。
